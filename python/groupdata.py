@@ -15,11 +15,11 @@ from sklearn.preprocessing import RobustScaler
 
 # load all the data
 df0 = pd.read_csv('./data/labeled_data_0.csv')
-df1 = pd.read_csv('./data/labeled_data_1.csv')
-df2 = pd.read_csv('./data/labeled_data_2.csv')
-df3 = pd.read_csv('./data/labeled_data_3.csv')
+# df1 = pd.read_csv('./data/labeled_data_1.csv')
+# df2 = pd.read_csv('./data/labeled_data_2.csv')
+# df3 = pd.read_csv('./data/labeled_data_3.csv')
 # Place into list of dataframes
-frames = [df0, df1, df2, df3]
+# frames = [df0, df1, df2, df3]
 print('data loaded')
 
 cluster = DBSCAN(eps=3, min_samples=2).fit(df0[['PCA1', 'PCA2']])
