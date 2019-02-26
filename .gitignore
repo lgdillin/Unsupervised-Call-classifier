@@ -1,3 +1,5 @@
 
 *.csv
 data/UA - Data Dictionary.xlsx
+.Rproj.user
+R/.RData
