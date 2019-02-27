@@ -4,6 +4,13 @@ athena.data = read.csv("../data/UA_AthenaData.csv", header = TRUE, sep = ",")
 research.data = read.csv("../data/UA_ResearchData.csv", header=TRUE, sep = ",")
 isLandline.data = split(research.data, research.data$isLandline)
 
+cellphone.data = isLandline.data$"FALSE"
+landline.data = isLandline.data$"TRUE"
+
+CPcount = aggregate(cellphone.data$call_time ~ cellphone.data$LineNumber, cellphone.data, FUN = "length")
+LLcount = aggregate(landline.data$call_time ~ landline.data$LineNumber, lmaandline.data, FUN = "length")
+
+
 
 # hist(athena.data$Total_B30Day_Calls, breaks = 30, freq = F, main = "Total_B30Day_Calls")
 
