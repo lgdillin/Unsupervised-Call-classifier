@@ -33,6 +33,5 @@ write.csv(LLathena, file = "landline_athena_anomaly.csv", row.names = F)
 # x = split(athena.data$Total_B30Day_Calls, )
 # x = as.numeric(unlist(x))
 
-hist(x, breaks = 30, freq = F, main = "Total_B30Day_Calls")
-d=density(x)
-plot(d)
+PCA.transformed = read.csv("../data/PCA_trans.csv", header=TRUE, sep = ",")
+hist(PCA.transformed$values, freq=F)
