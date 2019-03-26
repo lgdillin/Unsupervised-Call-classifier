@@ -15,10 +15,12 @@ from sklearn.preprocessing import RobustScaler, StandardScaler, MinMaxScaler
 
 plt.style.use('classic')
 
-cellphone_athena = pd.read_csv('./data/cellphone_athena_anomaly.csv')
+cellphone_athena = pd.read_csv('./data/test_transform.csv')
 # landline_athena = pd.read_csv('./data/landline_athena_anomaly.csv')
 
-cellphone_athena = cellphone_athena.drop(['LineNumber', 'CallCategory'], axis=1)
+#cellphone_athena = cellphone_athena.drop(['LineNumber', 'CallCategory'], axis=1)
+
+
 #url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 # load dataset into Pandas DataFrame
 #cellphone_athena = pd.read_csv(url, names=['sepal length','sepal width','petal length','petal width', 'target'])
@@ -27,6 +29,7 @@ cellphone_athena = cellphone_athena.drop(['LineNumber', 'CallCategory'], axis=1)
 ## Scale the data to have mean=0 and unit variance:
 # scaler = RobustScaler().fit(cellphone_athena)
 scaler = StandardScaler().fit(cellphone_athena)
+#scaler = MinMaxScaler().fit(cellphone_athena)
 scaler.transform(cellphone_athena)
 
 #Plotting the Cumulative Summation of the Explained Variance

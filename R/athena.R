@@ -23,8 +23,24 @@ LLanomaly = LLcount[LLcount$`landline.data$call_time` > 12,]
 CPathena = athena.data[CPanomaly$`cellphone.data$LineNumber`,]
 LLathena = athena.data[LLanomaly$`landline.data$LineNumber`,]
 
+test1 = subset(CPathena, select = -c("LineNumber", "CallCategory"))
+test1 = CPathena[, -c(1,2)]
+test1 = log(test1 + eps)
+write.csv(test1, file = "test_transform.csv", row.names = F)
+
 write.csv(CPathena, file = "cellphone_athena_anomaly.csv", row.names = F)
 write.csv(LLathena, file = "landline_athena_anomaly.csv", row.names = F)
+
+eps = 0.000001
+avg.callduration.transform = log(CPathena$Total_BToday_AvgDuration + eps)
+outlier.avgcalldur = which(avg.callduration.transform > 10)
+CPathena = CPathena[-c(outlier.avgcalldur),]
+
+n30daycalls.transform = log(CPathena$Total_N30Day_Calls + eps)
+outlier.30daycalls = c(which(n30daycalls.transform > 11), which(n30daycalls.transform < 0))
+CPathena = CPathena[-c(outlier.30daycalls),]
+
+write.csv(CPathena, file = "cellphone_athena_anomaly_trim.csv", row.names = F)
 
 # hist(athena.data$Total_B30Day_Calls, breaks = 30, freq = F, main = "Total_B30Day_Calls")
 
