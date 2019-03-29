@@ -23,9 +23,26 @@ LLanomaly = LLcount[LLcount$`landline.data$call_time` > 12,]
 CPathena = athena.data[CPanomaly$`cellphone.data$LineNumber`,]
 LLathena = athena.data[LLanomaly$`landline.data$LineNumber`,]
 
-test1 = subset(CPathena, select = -c("LineNumber", "CallCategory"))
+# test1 = subset(CPathena, select = -c("LineNumber", "CallCategory"))
 test1 = CPathena[, -c(1,2)]
 test1 = log(test1 + eps)
+# apply function
+mads = apply(test1, 2, mad)
+output = data.frame(test1)
+
+for(i in names(test1)) {
+  print(i)
+  col = test1[,i]
+  col.med = median(col)
+  col.mad = mads[[i]]
+  for(j in 1:length(col)) {
+    
+    x = test1[[j]][[i]]
+    output[[j]][[i]] = (0.6745 * (x - col.med)) / col.mad
+  }
+}
+
+
 write.csv(test1, file = "test_transform.csv", row.names = F)
 
 write.csv(CPathena, file = "cellphone_athena_anomaly.csv", row.names = F)
