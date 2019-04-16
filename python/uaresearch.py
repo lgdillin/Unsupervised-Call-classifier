@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from sklearn import preprocessing
-from sklearn.cluster import SpectralClustering, AgglomerativeClustering, DBSCAN
+from sklearn.cluster import SpectralClustering, AgglomerativeClustering, DBSCAN, KMeans
 from sklearn.decomposition import PCA
 from sklearn.manifold import Isomap, TSNE, MDS
 # from sklearn.mixture import GMM
@@ -31,6 +31,10 @@ num_comp = 12
 pca = PCA(n_components=4)
 cellphone_transformed = pca.fit_transform(cellphone_athena)
 
+cluster = KMeans(n_clusters = 2).fit(cellphone_transformed)
+labels = cluster.predict(cellphone_transformed)
+
+
 # Plot the variance elbow
 '''
 print(np.cumsum(pca.explained_variance_ratio_))
@@ -50,7 +54,8 @@ reduced = tsne.fit_transform(cellphone_transformed)
 
 cellphone_athena['DIM1'] = reduced[:, 0]
 cellphone_athena['DIM2'] = reduced[:, 1]
-sns.lmplot('DIM1', 'DIM2', data=cellphone_athena, fit_reg=False)
+cellphone_athena['labels'] = labels
+sns.lmplot('DIM1', 'DIM2', data=cellphone_athena, hue='labels',fit_reg=False)
 plt.show()
 
 '''
