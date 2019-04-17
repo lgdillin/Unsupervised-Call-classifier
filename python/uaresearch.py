@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import umap
 
 import matplotlib as mpl 
 import matplotlib.pyplot as plt 
@@ -9,7 +10,7 @@ from sklearn import preprocessing
 from sklearn.cluster import SpectralClustering, AgglomerativeClustering, DBSCAN, KMeans
 from sklearn.decomposition import PCA
 from sklearn.manifold import Isomap, TSNE, MDS
-# from sklearn.mixture import GMM
+from sklearn.mixture import GMM, BayesianGaussianMixture
 from sklearn.preprocessing import RobustScaler, StandardScaler, MinMaxScaler
 
 plt.style.use('classic')
@@ -31,7 +32,13 @@ num_comp = 12
 pca = PCA(n_components=4)
 cellphone_transformed = pca.fit_transform(cellphone_athena)
 
-cluster = KMeans(n_clusters = 2).fit(cellphone_transformed)
+# cluster = KMeans(n_clusters = 2).fit(cellphone_transformed)
+# cluster = GMM(n_components = 2).fit(cellphone_transformed)
+cluster = BayesianGaussianMixture(
+    n_components = 2, 
+    covariance_type = 'tied',
+    # weight_concentration_prior_type = 'dirichlet_process',
+    ).fit(cellphone_transformed)
 labels = cluster.predict(cellphone_transformed)
 
 
@@ -48,9 +55,9 @@ plt.show()
 '''
 
 tsne = TSNE(n_components=2, random_state=1, perplexity=90, n_iter= 4000, learning_rate=800)
-reduced = tsne.fit_transform(cellphone_transformed)
+# reduced = tsne.fit_transform(cellphone_transformed)
 # reduced = MDS(n_components=2).fit_transform(cellphone_transformed)
-# reduced = umap.UMAP(n_neighbors=20, min_dist=0.15).fit_transform(cellphone_transformed)
+reduced = umap.UMAP(n_neighbors=20, min_dist=0.15).fit_transform(cellphone_transformed)
 
 cellphone_athena['DIM1'] = reduced[:, 0]
 cellphone_athena['DIM2'] = reduced[:, 1]
