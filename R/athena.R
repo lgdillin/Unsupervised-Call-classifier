@@ -26,47 +26,90 @@ LLathena = athena.data[LLanomaly$`landline.data$LineNumber`,]
 
 # Strip off the categorial data and the cellphone numbers
 cp.numeric = CPathena[, -c(1,2)]
+ll.numeric = LLathena[, -c(1,2)]
 
+### CELLPHONE
 # Compute the Median Absolute Deviation (mad)
-mads = apply(cp.numeric, 2, mad)
-y = names(cp.numeric[mads == 0])
+cp.mads = apply(cp.numeric, 2, mad)
+ll.mads = apply(ll.numeric, 2, mad)
+
+cp.y = names(cp.numeric[cp.mads == 0])
+ll.y = names(ll.numeric[ll.mads == 0])
 # If MAD=0, then var=0, so we remove this useless feature
-novariance = c()
-for(i in 1:length(mads)) {
-  if(mads[i] == 0) {
-    novariance = append(novariance, i)
+cp.novariance = c()
+ll.novariance = c()
+for(i in 1:length(cp.mads)) {
+  if(cp.mads[i] == 0) {
+    cp.novariance = append(cp.novariance, i)
+  }
+  if(ll.mads[i] == 0) {
+    ll.novariance = append(ll.novariance, i)
   }
 }
-cp.numeric = cp.numeric[, -novariance]
-mads = apply(cp.numeric, 2, mad) # Re-compute the MAD
+# Remove columns with no variance
+cp.numeric = cp.numeric[, -cp.novariance]
+ll.numeric = cp.numeric[, -ll.novariance]
+# Re-compute the MAD for trimmed data
+cp.mads = apply(cp.numeric, 2, mad) 
+ll.mads = apply(ll.numeric, 2, mad)
 
+
+### Cellphone data
 # detect outliers using a modified-z-score approach
-output = data.frame(cp.numeric) # Copy the data for rewriting
+cp.output = data.frame(cp.numeric) # Copy the data for rewriting
 for(i in 1:ncol(cp.numeric)) {
-  col = cp.numeric[,i]
-  col.med = median(col)
-  col.mad = mads[i]
+  cp.col = cp.numeric[,i]
+  cp.col.med = median(cp.col)
+  cp.col.mad = cp.mads[i]
   for(j in 1:nrow(cp.numeric)) {
-    x = cp.numeric[j,i]
-    output[j,i] = (0.6745 * (x - col.med)) / col.mad
+    cp.x = cp.numeric[j,i]
+    cp.output[j,i] = (0.6745 * (cp.x - cp.col.med)) / cp.col.mad
   }
 }
 
 # Remove rows that contain outliers
-outliers = c()
-for(i in 1:nrow(output)) {
-  for(j in 1:ncol(output)) {
-    if(abs(output[i,j] > 3.5)) {
-      outliers = append(outliers, i)
+cp.outliers = c()
+for(i in 1:nrow(cp.output)) {
+  for(j in 1:ncol(cp.output)) {
+    if(abs(cp.output[i,j] > 3.5)) {
+      cp.outliers = append(cp.outliers, i)
     }
   }
 }
-removed.outliers = output[-outliers,]
+cp.removed.outliers = cp.output[-cp.outliers,]
+write.csv(cp.removed.outliers, file = "cp_transformed.csv", row.names = F)
 
-write.csv(removed.outliers, file = "test_transform1.csv", row.names = F)
 
-write.csv(CPathena, file = "cellphone_athena_anomaly.csv", row.names = F)
-write.csv(LLathena, file = "landline_athena_anomaly.csv", row.names = F)
+### LandLine data
+# detect outliers using a modified-z-score approach
+ll.output = data.frame(ll.numeric) # Copy the data for rewriting
+for(i in 1:ncol(ll.numeric)) {
+  ll.col = ll.numeric[,i]
+  ll.col.med = median(ll.col)
+  ll.col.mad = ll.mads[i]
+  for(j in 1:nrow(ll.numeric)) {
+    ll.x = ll.numeric[j,i]
+    ll.output[j,i] = (0.6745 * (ll.x - ll.col.med)) / ll.col.mad
+  }
+}
+
+# Remove rows that contain outliers
+ll.outliers = c()
+for(i in 1:nrow(ll.output)) {
+  for(j in 1:ncol(ll.output)) {
+    if(abs(ll.output[i,j] > 3.5)) {
+      ll.outliers = append(ll.outliers, i)
+    }
+  }
+}
+ll.removed.outliers = ll.output[-ll.outliers,]
+write.csv(ll.removed.outliers, file = "ll_transformed.csv", row.names = F)
+
+
+#################################################################################
+# Pretty much garbage below here
+# write.csv(CPathena, file = "cellphone_athena_anomaly.csv", row.names = F)
+# write.csv(LLathena, file = "landline_athena_anomaly.csv", row.names = F)
 
 eps = 0.000001
 avg.callduration.transform = log(CPathena$Total_BToday_AvgDuration + eps)

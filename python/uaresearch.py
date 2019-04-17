@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
-import umap
+import umap.umap_ as umap
+#import umap
+
+#import umaplearn
 
 import matplotlib as mpl 
 import matplotlib.pyplot as plt 
@@ -10,7 +13,7 @@ from sklearn import preprocessing
 from sklearn.cluster import SpectralClustering, AgglomerativeClustering, DBSCAN, KMeans
 from sklearn.decomposition import PCA
 from sklearn.manifold import Isomap, TSNE, MDS
-from sklearn.mixture import GMM, BayesianGaussianMixture
+# from sklearn.mixture import GMM, BayesianGaussianMixture
 from sklearn.preprocessing import RobustScaler, StandardScaler, MinMaxScaler
 
 plt.style.use('classic')
