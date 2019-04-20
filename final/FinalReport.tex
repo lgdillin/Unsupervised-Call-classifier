@@ -1,0 +1,263 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[20pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+%\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{mathtools}
+\usepackage{graphicx} % supports images in latex
+% These packages are all incorporated in the memoir class to one degree or another...
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+%%% Other stuff
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% graphics path
+
+
+%%% END Article customizations
+
+%%% nice things to keep around
+%\begin{figure}[!htbp]
+%  	\centering
+%   	\begin{subfigure}[p]{0.5\linewidth}
+%    	\includegraphics[width=\linewidth]{}
+%   	\end{subfigure}
+%\end{figure} 
+
+% \noindent\rule{2cm}{0.4pt} 
+%%% puts a small horizontal line
+
+% \mathcal{O} 
+%%% big O notation
+
+% \begin{table}[!htbp]
+% \caption{Forward slash.}
+% \[\begin{array}{c|ccccc} 
+% abc/def & 1 & 2 & 3 & 4 & 5\\
+% \hline
+% 1 & a & b & c & d & e\\
+% 2 & f & g & h & i & j\\
+% 3 & k & l & m & n & o\\
+% \end{array}\]
+% \end{table}
+
+%%% The "real" document content comes below...
+
+\title{Unsupervised Call Classifier}
+\author{Liam Dillingham}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.5\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/uofa.png}
+   	\end{subfigure}
+\end{figure} 
+\begin{center}
+\LARGE University of Arkansas - CSCE Department\\
+\LARGE Capstone II - Final Report - Spring 2019\\ 
+\LARGE Unsupervised Call Classifier\\ 
+\Large Liam Dillingham, Spencer Erdman, Damian Wells, Jonah Keller
+\end{center}
+
+\section{Abstract}
+Spam calls are an issue that affects nearly everyone with a cellphone.  Partly due to security flaws from other companies, our personal information is freely available on the web.  This makes us vulnerable to regular phone calls from bots, telemarketers, and scammers.  
+We want to explore the structure of phone call data, and use data science techniques in order to mitigate the occurrence of spam calls.
+
+\section{Problem}
+Since the ground truth of the data we are given is not known, it is up to proper preprocessing techniques to wrangle the data into a format where unsupervised clustering techniques can be properly used.  Then it is up to experimentation to find a technique that properly separates the data into a binary classification using only the natural struture of the data.  These classes can be investigated further to derive the truth of the classes.
+
+\section{Objective}
+The goal of this project is to assist the company First Orion in improving upon their already existing models which detect and stop phone calls.  Whether through their carrier technology, which stops these detected calls at the network level, or on user’s phones through an app which performs an automatic hang up, we want to take given data, derive useful results using unsupervised techniques, and use those results to improve their data on spam callers, and thus improve the technologies and products they offer their customers.
+
+\newpage
+\section{Background}
+\subsection{Key Concepts}
+\begin{itemize}
+\item \textbf{\underline{Unsupervised Learning:}} When we have data which is unlabeled, and we need to derive a result from (in this case classification), we cannot use traditional methods of learning. Since the \textbf{ground truth} is not known, we have to use techniques which explore the natural structure of the data, and do an investigation of the results
+\item \textbf{\underline{Ground Truth:}} The value, or label of an observation or row of data, given that the truth is known. i.e. not the predicted truth.
+\item \textbf{\underline{Data Wrangling:}} The act and process of cleaning data, removing outliers, and processing it such that it can work with known and proven techniques and algorithms.
+\end{itemize}
+
+\subsection{Related Work}
+The First Orion data science team is regularly working on models which detect and classify phone numbers as spam or legitimate, and our goal is to improve upon the techniques and give insight so that the team can provide a better product to carriers and users.
+
+\section{Design}
+\subsection{Requirements and/or Use Cases and/or Design Goals}
+The most important part of these insights is to reduce false positives.  That is, to not block people who may be high-volume, but not actually spam.  This is important because then people who have legitimate needs to make many phone calls in a short amount of time will be blocked from calling, and this could have serious implications for business or otherwise.
+\subsection{Detailed Architecture}
+Our data consisted of two sets.  The first set was a 6-minute frame of streaming phone call data.  It consisted of 3 features.  The encrypted phone number, an EPOCH time for when the call was initiated, and a flag to discern between a landline and a mobile call.  The task was to first split the data into separate sets between landline and mobile.  Since the dataset was rather larger ($>70,000$ rows) this first step reduced the size of the dataset substantially.  The we ran over the data and counted the number of phone calls made by each number.  After an interquartile range analysis, we decided than anyone who makes more than 12 phone calls in 6 minutes on a landline and 11 on a cellphone is considered an anomaly.  This doesn’t necessarily mean that all those callers are spam, but they are certainly an anomaly.  
+
+The next step was to take our anomalies detected in the streaming phone data, and use them to filter from our other dataset.  This dataset, contains a list of historical phone call data about many phone numbers.  It was about 80,000 rows with 31 features.  To reduce the size of this dataset we then used both the reduced cellphone and landline data to pull out matching phone numbers.  This was then the data we were to work with.  
+
+We wanted to use principal component analysis (PCA) to figure how many dimensions were required to explain at least 85\% of the variance in the set as a whole.  However, there were some extreme outliers in the data.  A few of the feature columns had a single outlier which dominated the variance of the entire set and broke the PCA algorithm. 
+
+\newpage
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/anotherfullheatmap.png}
+	\caption{Correlation matrix of data with outliers (cellphone)}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/explained_variance.png}
+	\caption{Variance elbow curve (cellphone)}
+   	\end{subfigure}
+\end{figure} 
+
+We can see from the variance plot, and the correlation matrix above that a single feature column had variance so high that the relationship between all other features is obfuscated by such a large variance.  In addition, many of these columns have a variance of 0 (that is, all fields have the exact same value for the whole column) so they are useless when deriving some sort of insight for the data.  In most cases, they can ruin the results of a model.  So we needed to find a way to remove these useless columns and model-destroying outliers.
+
+
+So we had to experiment with several different methods of outlier removal in order to preprocess the data in such a way that the algorithms would work.  We used a modified z-score approach to remove rows with outliers that dominated the variance of their columns.  The standard z-score approach is to divide the difference of the column mean and the data value by the standard deviation of the column.  The modified z-score uses the difference between the median and the value, and divides by the mean absolute deviation instead.  This method is more robust to outliers, and helps us calculate them. After doing these two steps, we end up with a much better looking correlation matrix and elbow curve
+
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redacted/correlation_matrix.png}
+	\caption{preprocessed correlation matrix (cellphone)}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/better_cov.png}
+	\caption{Variance elbow curve (cellphone)}
+   	\end{subfigure}
+\end{figure} 
+\newpage
+Keep in mind that the data we are looking at here is specifically the cellphone data.  The landline data, while suffering from the same problems, ended up being a much simpler result after applying the same methodologies: Below are the before and after results of preprocessing the landline data:
+
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/landline/raw_correlation_matrix.png}
+	\caption{unprocessed correlation matrix (landline)}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/landline/raw_variance_curve.png}
+	\caption{Variance elbow curve before preprocessing (landline)}
+   	\end{subfigure}
+\end{figure} 
+
+And after feature selection, and outlier detection and removal:
+
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/landline/trasnformed_corr.png}
+	\caption{preprocessed correlation matrix (landline)}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/landline/transformedelbow.png}
+	\caption{Variance elbow curve (landline)}
+   	\end{subfigure}
+\end{figure} 
+
+Once this was completed, that is, the data is successfully cleansed/wrangled, we now needed to explore several clustering techniques to try and find a natural separation in the data.
+
+\subsection{Risks}
+\begin{itemize}
+\item \textbf{False Positives:} We reduce this risk by first setting a threshold below which "normal" callers are placed.  By doing so, we reduce the amount of variance in the data and can focus entirely upon the anomalies.  Since we are only dealing with the anomalies, the average person won't be accidently detected, and as a consequence the different between a legitimate anomaly (a person with real needs to make many calls) and a spam caller will become more apparent, as the structure of the data overall won't be obscured by the average person.
+\end{itemize}
+\subsection{Tasks}
+
+\subsection{Schedule}
+
+\subsection{Deliverables}
+\begin{itemize}
+\item \textbf{R code:} This is the code use to wrangle some of the data and split it into subsets, as well as detect and remove outliers
+\item \textbf{Python code:} This is the code used to run clustering and plotting algorithms on, produce plots, etc.
+\item \textbf{Insights:} Our project won't neccesarily have a deliverable, the deliverable is, the insights we can provide with our techniques, that is differentiating between high-volume legitimate callers and spam callers.  The spam callers will have to be investigated on their own once the results are complete.
+\end{itemize}
+
+\section{Key Personnel} 
+\begin{itemize}
+\item \textbf{Liam Dillingham} - A senior Computer Science and Mathematics (Statistics) double major in the CSCE and FullBright college at University of Arkansas.  Complete relevant courses: STAT 4003 (Statistical Methods), Machine Learning (CSCE 5063), Big Data Analytics and Management (CSCE 5273), and Computational Statistics (STAT 5443).  Relevant experience comes from previous internships as a dual-role software engineer/data scientist, as well as course-related projects.  Tasks included working with industry champions to produce satisfactory results and develop code and insights from data
+
+\item \textbf{Industry Champion: Nysia George} - Nysia is a senior level data scientist at First Orion, and was tasked to be our mentor during the course of the project.  She is who we brought our results to, asked questions, and took guidance in order to provide her with results that aided in her work and improving the company's products.
+\end{itemize}
+
+\section{Facilities and Equipment}
+Initially we believed we needed a larger computer in order to run some of the more complex algorithms on the data, however, after sufficient preprocessing, we were able to reduce the size and complexity of the data to a much more manageable scale.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
