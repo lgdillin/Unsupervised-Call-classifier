@@ -3,6 +3,7 @@ import numpy as np
 # import umap
 
 import matplotlib as mpl 
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt 
 import seaborn as sns
 
@@ -22,15 +23,18 @@ scaler = StandardScaler().fit(cellphone_athena)
 scaler.transform(cellphone_athena)
 
 # Apply the transformation
-num_comp = 4
+num_comp = 3
 pca = PCA(n_components=num_comp)
+# print(pca.components_)
 cellphone_transformed = pca.fit_transform(cellphone_athena)
+# cellphone_transformed = pd.DataFrame(cellphone_transformed)
+# print(cellphone_transformed[0])
 
 # '''
 sum_of_squared_distances = []
 K = range(1,15)
 for k in K:
-    km = KMeans(n_clusters=k)
+    km = KMeans(n_clusters=k, whiten = True)
     km = km.fit(cellphone_transformed)
     sum_of_squared_distances.append(km.inertia_)
 
@@ -42,14 +46,19 @@ plt.show()
 # '''
 
 # reduced = umap.UMAP(n_neighbors=20, min_dist=0.15).fit_transform(cellphone_transformed)
-reduced = TSNE(n_components=2, random_state=1, perplexity=90, n_iter= 4000, learning_rate=800).fit_transform(cellphone_transformed)
 
-cluster = KMeans(n_clusters = 4).fit(cellphone_transformed)
-labels = cluster.predict(cellphone_transformed)
+#cluster = KMeans(n_clusters = 4).fit(cellphone_transformed)
+#labels = cluster.predict(cellphone_transformed)
 
 
-cellphone_athena['DIM1'] = reduced[:, 0]
-cellphone_athena['DIM2'] = reduced[:, 1]
-cellphone_athena['labels'] = labels
-sns.lmplot('DIM1', 'DIM2', data=cellphone_athena, hue='labels',fit_reg=False)
+cellphone_athena['DIM1'] = cellphone_transformed[:, 0]
+cellphone_athena['DIM2'] = cellphone_transformed[:, 1]
+cellphone_athena['DIM3'] = cellphone_transformed[:, 2]
+#cellphone_athena['labels'] = labels
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(cellphone_athena['DIM1'], cellphone_athena['DIM2'], cellphone_athena['DIM3'])
+
+#sns.lmplot('DIM1', 'DIM2', data=cellphone_athena, hue='labels',fit_reg=False)
 plt.show()

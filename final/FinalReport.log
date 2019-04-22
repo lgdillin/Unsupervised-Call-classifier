@@ -1,12 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  20 APR 2019 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.30)  22 APR 2019 10:05
 entering extended mode
 **./FinalReport.tex
 (FinalReport.tex
-LaTeX2e <2018-04-01> patch level 5
-(E:\miketex\tex\latex\base\article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(E:\miketex\tex\latex\base\size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+LaTeX2e <2018-12-01>
+
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cl
+s"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo
+"
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -19,25 +22,33 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (E:\miketex\tex\latex\base\inputenc.sty
-Package: inputenc 2018/04/06 v1.3b Input encoding file
+)
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.s
+ty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-) (E:\miketex\tex\latex\geometry\geometry.sty
+)
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geomet
+ry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-(E:\miketex\tex\latex\graphics\keyval.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval
+.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(E:\miketex\tex\generic\oberdiek\ifpdf.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpd
+f.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
-(E:\miketex\tex\generic\oberdiek\ifvtex.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvt
+ex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(E:\miketex\tex\generic\ifxetex\ifxetex.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxet
+ex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -53,28 +64,35 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks17
 
-(E:\miketex\tex\latex\geometry\geometry.cfg))
-(E:\miketex\tex\latex\graphics\graphicx.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geomet
+ry.cfg"))
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(E:\miketex\tex\latex\graphics\graphics.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cs.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(E:\miketex\tex\latex\graphics\trig.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.s
+ty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(E:\miketex\tex\latex\graphics-cfg\graphics.cfg
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\gr
+aphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(E:\miketex\tex\latex\graphics-def\pdftex.def
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pd
+ftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
-(E:\miketex\tex\latex\booktabs\booktabs.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\bookta
+bs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen113
 \lightrulewidth=\dimen114
@@ -94,17 +112,19 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count94
 \@thisrulewidth=\dimen125
 )
-(E:\miketex\tex\latex\tools\array.sty
-Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty
+"
+Package: array 2018/11/13 v2.4j Tabular extension package (FMi)
 \col@sep=\dimen126
-\ar@mcellbox=\box26
+\ar@mcellbox=\box27
 \extrarowheight=\dimen127
 \NC@list=\toks18
 \extratabsurround=\skip43
 \backup@length=\skip44
-\ar@cellbox=\box27
+\ar@cellbox=\box28
 )
-(E:\miketex\tex\latex\paralist\paralist.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\parali
+st.sty"
 Package: paralist 2017/01/22 v2.7 Extended list environments
 \pltopsep=\skip45
 \plpartopsep=\skip46
@@ -112,16 +132,18 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plparsep=\skip48
 \pl@lab=\toks19
 )
-(E:\miketex\tex\latex\tools\verbatim.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.
+sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks20
 \verbatim@line=\toks21
 \verbatim@in@stream=\read1
 )
-(E:\miketex\tex\latex\mathtools\mathtools.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\matht
+ools.sty"
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
-(E:\miketex\tex\latex\tools\calc.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count95
 \calc@Bcount=\count96
@@ -134,44 +156,51 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count97
 \calc@Cskip=\skip51
 )
-(E:\miketex\tex\latex\mathtools\mhsetup.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhset
+up.sty"
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
-(E:\miketex\tex\latex\amsmath\amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath
+.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
-(E:\miketex\tex\latex\amsmath\amstext.sty
+
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext
+.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(E:\miketex\tex\latex\amsmath\amsgen.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.
+sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen130
 ))
-(E:\miketex\tex\latex\amsmath\amsbsy.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.
+sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen131
 )
-(E:\miketex\tex\latex\amsmath\amsopn.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.
+sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count98
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 223.
 \uproot@=\count99
 \leftroot@=\count100
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 385.
 \classnum@=\count101
 \DOTSCASE@=\count102
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
 \big@size=\dimen132
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \macc@depth=\count103
 \c@MaxMatrixCols=\count104
 \dotsspace@=\muskip10
@@ -192,8 +221,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks26
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
@@ -209,13 +238,16 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen144
 \l_MT_below_shortintertext_sep=\dimen145
 )
-(E:\miketex\tex\latex\caption\subcaption.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcapt
+ion.sty"
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 
-(E:\miketex\tex\latex\caption\caption.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+.sty"
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-(E:\miketex\tex\latex\caption\caption3.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+3.sty"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen146
@@ -232,7 +264,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \c@subfigure=\count113
 \c@subtable=\count114
 )
-(E:\miketex\tex\latex\fancyhdr\fancyhdr.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyh
+dr.sty"
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip56
@@ -245,18 +278,22 @@ s
 \f@nch@O@olf=\skip63
 \f@nch@O@orf=\skip64
 )
-(E:\miketex\tex\latex\sectsty\sectsty.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sectsty\sectsty
+.sty"
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
-(E:\miketex\tex\latex\tocbibind\tocbibind.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocbibind\tocbi
+bind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
 
 
 Package tocbibind Note: Using section or other style headings.
 
-) (E:\miketex\tex\latex\tocloft\tocloft.sty
+)
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\tocloft
+.sty"
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
 \cftparskip=\skip65
@@ -351,11 +388,13 @@ LaTeX Font Info:    ... okay on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(E:\miketex\tex\context\base\supp-pdf.mkii
+
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf
+.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
 \scratchdimen=\dimen153
-\scratchbox=\box30
+\scratchbox=\box31
 \nofMPsegments=\count116
 \nofMParguments=\count117
 \everyMPshowfont=\toks27
@@ -364,40 +403,46 @@ LaTeX Font Info:    ... okay on input line 98.
 \MPnumerator=\count119
 \makeMPintoPDFobject=\count120
 \everyMPtoPDFconversion=\toks28
-) (E:\miketex\tex\latex\oberdiek\epstopdf-base.sty
+)
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstop
+df-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(E:\miketex\tex\generic\oberdiek\infwarerr.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infw
+arerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(E:\miketex\tex\latex\oberdiek\grfext.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext
+.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(E:\miketex\tex\generic\oberdiek\kvdefinekeys.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvde
+finekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-(E:\miketex\tex\generic\oberdiek\ltxcmds.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxc
+mds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-(E:\miketex\tex\latex\oberdiek\kvoptions.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvopti
+ons.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(E:\miketex\tex\generic\oberdiek\kvsetkeys.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvse
+tkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(E:\miketex\tex\generic\oberdiek\etexcmds.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etex
+cmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(E:\miketex\tex\generic\oberdiek\ifluatex.sty
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\iflu
+atex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-(E:\miketex\tex\generic\oberdiek\pdftexcmds.sty
+))))
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdft
+excmds.sty"
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -421,11 +466,12 @@ Package pdftex.def Info: ../figures/uofa.png  used on input line 102.
 (pdftex.def)             Requested size: 209.12683pt x 87.562pt.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <../figures/uofa.png>]
+{C:/Users/lgdillin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../figur
+es/uofa.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 126.
 
 
-(E:\miketex\tex\latex\base\omscmr.fd
+("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -481,27 +527,47 @@ File: ../figures/landline/transformedelbow.png Graphic file (type png)
 Package pdftex.def Info: ../figures/landline/transformedelbow.png  used on inpu
 t line 197.
 (pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
- [4 <../figures/landline/raw_correlation_matrix.png> <../figures/landline/raw_v
-ariance_curve.png> <../figures/landline/trasnformed_corr.png> <../figures/landl
-ine/transformedelbow.png>] [5] (FinalReport.aux) ) 
+<../figures/landline/optimal_kmeans.png, id=34, 578.16pt x 433.62pt>
+File: ../figures/landline/optimal_kmeans.png Graphic file (type png)
+<use ../figures/landline/optimal_kmeans.png>
+Package pdftex.def Info: ../figures/landline/optimal_kmeans.png  used on input 
+line 206.
+(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
+<../figures/cellphone_cluster/kmeans.png, id=35, 578.16pt x 433.62pt>
+File: ../figures/cellphone_cluster/kmeans.png Graphic file (type png)
+<use ../figures/cellphone_cluster/kmeans.png>
+Package pdftex.def Info: ../figures/cellphone_cluster/kmeans.png  used on input
+ line 210.
+(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
+
+[4 <../figures/landline/raw_correlation_matrix.png> <../figures/landline/raw_va
+riance_curve.png> <../figures/landline/trasnformed_corr.png> <../figures/landli
+ne/transformedelbow.png>] [5 <../figures/landline/optimal_kmeans.png> <../figur
+es/cellphone_cluster/kmeans.png>] [6] (FinalReport.aux) ) 
 Here is how much of TeX's memory you used:
- 5151 strings out of 492970
- 77413 string characters out of 3143381
- 159473 words of memory out of 3000000
- 8944 multiletter control sequences out of 15000+200000
- 7412 words of font info for 27 fonts, out of 3000000 for 9000
+ 5174 strings out of 492946
+ 82407 string characters out of 3124934
+ 159946 words of memory out of 3000000
+ 8981 multiletter control sequences out of 15000+200000
+ 9734 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,43p,851b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
-<E:/miketex/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-<E:/miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/miketex/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr17.pfb
-><E:/miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/miketex/fonts/type1/pu
-blic/amsfonts/cm/cmss12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb>
-Output written on FinalReport.pdf (5 pages, 296875 bytes).
+ 42i,10n,43p,1104b,506s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/lgdillin/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Us
+ers/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi9.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lgdillin/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lgdillin/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users
+/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9
+.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmss12.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lgdillin/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on FinalReport.pdf (6 pages, 368380 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

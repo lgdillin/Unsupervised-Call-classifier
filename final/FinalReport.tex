@@ -199,7 +199,18 @@ And after feature selection, and outlier detection and removal:
    	\end{subfigure}
 \end{figure} 
 
-Once this was completed, that is, the data is successfully cleansed/wrangled, we now needed to explore several clustering techniques to try and find a natural separation in the data.
+Once this was completed, that is, the data is successfully cleansed/wrangled, we now needed to explore several clustering techniques to try and find a natural separation in the data.  For the cellphone data, since the dimensionality was much higher, we needed to rely on a projection algorithm to visually verify the results of a clustering algorithm.  We used an algorithm call \textit{Uniform Manifold Approximation and Projection (UMAP)}.  First, we use Principal Component Analysis to select the minimum number of dimensions which gave us at least 85\% of the variance explained.  In the cellphone data case, it was 4.  So we ran the \textit{KMeans} clustering algorithm on the top 4 principal components (The 4 features which compose at least 85\% of the variance) and measured the sum squared distance between all points of a given cluster and the distance to their cluster center.  The smallest value of $k$ which gives us the smallest squared distance (called \textit{inertia}) is the optimal $k$.  Below are the plots for both cellphone and landline datasets:
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/landline/optimal_kmeans.png}
+	\caption{Optimal $k$ for landline data}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/cellphone_cluster/kmeans.png}
+	\caption{Optimal $k$ for cellphone data}
+   	\end{subfigure}
+\end{figure} 
 
 \subsection{Risks}
 \begin{itemize}

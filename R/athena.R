@@ -76,7 +76,8 @@ for(i in 1:nrow(cp.output)) {
     }
   }
 }
-cp.removed.outliers = cp.output[-cp.outliers,]
+# cp.removed.outliers = cp.output[-cp.outliers,]
+cp.removed.outliers = cp.numeric[-cp.outliers,]
 write.csv(cp.removed.outliers, file = "cp_transformed.csv", row.names = F)
 
 
@@ -102,8 +103,18 @@ for(i in 1:nrow(ll.output)) {
     }
   }
 }
-ll.removed.outliers = ll.output[-ll.outliers,]
+# ll.removed.outliers = ll.output[-ll.outliers,]
+ll.removed.outliers = ll.numeric[-ll.outliers,]
 write.csv(ll.removed.outliers, file = "ll_transformed.csv", row.names = F)
+
+#Produce histograms
+for(i in 1:ncol(cp.removed.outliers)) {
+  hist(cp.removed.outliers[,i], freq = F, breaks = 30, main = names(cp.removed.outliers)[i])
+}
+
+for(i in 1:ncol(ll.removed.outliers)) {
+  hist(ll.removed.outliers[,i], freq = F, breaks = 30, main = names(ll.removed.outliers)[i])
+}
 
 
 #################################################################################
