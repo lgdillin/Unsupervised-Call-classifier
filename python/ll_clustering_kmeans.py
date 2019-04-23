@@ -24,30 +24,32 @@ scaler.transform(cellphone_athena)
 
 # Apply the transformation
 num_comp = 2
-pca = PCA(n_components=num_comp)
+pca = PCA(n_components = 'mle')
 # print(pca.components_)
 cellphone_transformed = pca.fit_transform(cellphone_athena)
 # cellphone_transformed = pd.DataFrame(cellphone_transformed)
 # print(cellphone_transformed[0])
+print(pca.components_)
+print(pca.singular_values_)
 
 # '''
 sum_of_squared_distances = []
 K = range(1,15)
 for k in K:
-    km = KMeans(n_clusters=k, whiten = True)
+    km = KMeans(n_clusters=k)
     km = km.fit(cellphone_transformed)
     sum_of_squared_distances.append(km.inertia_)
 
 plt.plot(K, sum_of_squared_distances, 'bx-')
 plt.xlabel('k')
 plt.ylabel('Sum_of_squared_distances')
-plt.title('Elbow Method For Optimal k')
+plt.title('Elbow Method For Optimal k (landline)')
 plt.show()
 # '''
 
 # reduced = umap.UMAP(n_neighbors=20, min_dist=0.15).fit_transform(cellphone_transformed)
 
-cluster = KMeans(n_clusters = 3, whiten = True).fit(cellphone_transformed)
+cluster = KMeans(n_clusters = 2).fit(cellphone_transformed)
 labels = cluster.predict(cellphone_transformed)
 
 
@@ -58,5 +60,5 @@ cellphone_athena['labels'] = labels
 #fig = plt.figure()
 #ax = fig.add_subplot(111, projection='3d')
 #ax.scatter(cellphone_athena['DIM1'], cellphone_athena['DIM2'], cellphone_athena['DIM3'])
-sns.lmplot('DIM1', 'DIM2', data=cellphone_athena, hue='labels',fit_reg=False)
+sns.lmplot('DIM1', 'DIM2', data=cellphone_athena,fit_reg=False)
 plt.show()

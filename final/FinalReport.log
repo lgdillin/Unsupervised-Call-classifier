@@ -1,15 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.30)  22 APR 2019 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  23 APR 2019 02:47
 entering extended mode
 **./FinalReport.tex
 (FinalReport.tex
-LaTeX2e <2018-12-01>
-
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cl
-s"
-Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo
-"
-File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+LaTeX2e <2018-04-01> patch level 5
+(E:\miketex\tex\latex\base\article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(E:\miketex\tex\latex\base\size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -22,33 +19,25 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.s
-ty"
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+) (E:\miketex\tex\latex\base\inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-)
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geomet
-ry.sty"
+) (E:\miketex\tex\latex\geometry\geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval
-.sty"
+(E:\miketex\tex\latex\graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpd
-f.sty"
+(E:\miketex\tex\generic\oberdiek\ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvt
-ex.sty"
+(E:\miketex\tex\generic\oberdiek\ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxet
-ex.sty"
+(E:\miketex\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -64,35 +53,28 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks17
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geomet
-ry.cfg"))
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
-cx.sty"
+(E:\miketex\tex\latex\geometry\geometry.cfg))
+(E:\miketex\tex\latex\graphics\graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
-cs.sty"
+(E:\miketex\tex\latex\graphics\graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.s
-ty"
+(E:\miketex\tex\latex\graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\gr
-aphics.cfg"
+(E:\miketex\tex\latex\graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pd
-ftex.def"
+(E:\miketex\tex\latex\graphics-def\pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\bookta
-bs.sty"
+(E:\miketex\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen113
 \lightrulewidth=\dimen114
@@ -112,19 +94,17 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count94
 \@thisrulewidth=\dimen125
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty
-"
-Package: array 2018/11/13 v2.4j Tabular extension package (FMi)
+(E:\miketex\tex\latex\tools\array.sty
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen126
-\ar@mcellbox=\box27
+\ar@mcellbox=\box26
 \extrarowheight=\dimen127
 \NC@list=\toks18
 \extratabsurround=\skip43
 \backup@length=\skip44
-\ar@cellbox=\box28
+\ar@cellbox=\box27
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\parali
-st.sty"
+(E:\miketex\tex\latex\paralist\paralist.sty
 Package: paralist 2017/01/22 v2.7 Extended list environments
 \pltopsep=\skip45
 \plpartopsep=\skip46
@@ -132,18 +112,16 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plparsep=\skip48
 \pl@lab=\toks19
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.
-sty"
+(E:\miketex\tex\latex\tools\verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks20
 \verbatim@line=\toks21
 \verbatim@in@stream=\read1
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\matht
-ools.sty"
+(E:\miketex\tex\latex\mathtools\mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
+(E:\miketex\tex\latex\tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count95
 \calc@Bcount=\count96
@@ -156,51 +134,44 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count97
 \calc@Cskip=\skip51
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhset
-up.sty"
+(E:\miketex\tex\latex\mathtools\mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath
-.sty"
-Package: amsmath 2018/12/01 v2.17b AMS math features
+(E:\miketex\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
-
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext
-.sty"
+(E:\miketex\tex\latex\amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.
-sty"
+(E:\miketex\tex\latex\amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen130
 ))
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.
-sty"
+(E:\miketex\tex\latex\amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen131
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.
-sty"
+(E:\miketex\tex\latex\amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count98
-LaTeX Info: Redefining \frac on input line 223.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count99
 \leftroot@=\count100
-LaTeX Info: Redefining \overline on input line 385.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count101
 \DOTSCASE@=\count102
-LaTeX Info: Redefining \ldots on input line 482.
-LaTeX Info: Redefining \dots on input line 485.
-LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box29
-\strutbox@=\box30
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
 \big@size=\dimen132
-LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count103
 \c@MaxMatrixCols=\count104
 \dotsspace@=\muskip10
@@ -221,8 +192,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks26
-LaTeX Info: Redefining \[ on input line 2844.
-LaTeX Info: Redefining \] on input line 2845.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
@@ -238,16 +209,13 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen144
 \l_MT_below_shortintertext_sep=\dimen145
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcapt
-ion.sty"
+(E:\miketex\tex\latex\caption\subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
-.sty"
+(E:\miketex\tex\latex\caption\caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
-3.sty"
+(E:\miketex\tex\latex\caption\caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen146
@@ -264,8 +232,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \c@subfigure=\count113
 \c@subtable=\count114
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyh
-dr.sty"
+(E:\miketex\tex\latex\fancyhdr\fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip56
@@ -278,22 +245,18 @@ s
 \f@nch@O@olf=\skip63
 \f@nch@O@orf=\skip64
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sectsty\sectsty
-.sty"
+(E:\miketex\tex\latex\sectsty\sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocbibind\tocbi
-bind.sty"
+(E:\miketex\tex\latex\tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
 
 
 Package tocbibind Note: Using section or other style headings.
 
-)
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\tocloft
-.sty"
+) (E:\miketex\tex\latex\tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
 \cftparskip=\skip65
@@ -388,13 +351,11 @@ LaTeX Font Info:    ... okay on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pdf
-.mkii"
+(E:\miketex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
 \scratchdimen=\dimen153
-\scratchbox=\box31
+\scratchbox=\box30
 \nofMPsegments=\count116
 \nofMParguments=\count117
 \everyMPshowfont=\toks27
@@ -403,46 +364,40 @@ LaTeX Font Info:    ... okay on input line 98.
 \MPnumerator=\count119
 \makeMPintoPDFobject=\count120
 \everyMPtoPDFconversion=\toks28
-)
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstop
-df-base.sty"
+) (E:\miketex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infw
-arerr.sty"
+(E:\miketex\tex\generic\oberdiek\infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext
-.sty"
+(E:\miketex\tex\latex\oberdiek\grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvde
-finekeys.sty"
+(E:\miketex\tex\generic\oberdiek\kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxc
-mds.sty"
+(E:\miketex\tex\generic\oberdiek\ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvopti
-ons.sty"
+(E:\miketex\tex\latex\oberdiek\kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvse
-tkeys.sty"
+(E:\miketex\tex\generic\oberdiek\kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etex
-cmds.sty"
+(E:\miketex\tex\generic\oberdiek\etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\iflu
-atex.sty"
+(E:\miketex\tex\generic\oberdiek\ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-))))
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdft
-excmds.sty"
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(E:\miketex\tex\generic\oberdiek\pdftexcmds.sty
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -466,12 +421,11 @@ Package pdftex.def Info: ../figures/uofa.png  used on input line 102.
 (pdftex.def)             Requested size: 209.12683pt x 87.562pt.
  [1
 
-{C:/Users/lgdillin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <../figur
-es/uofa.png>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <../figures/uofa.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 126.
 
 
-("C:\Users\lgdillin\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+(E:\miketex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -481,93 +435,156 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 File: ../figures/anotherfullheatmap.png Graphic file (type png)
 <use ../figures/anotherfullheatmap.png>
 Package pdftex.def Info: ../figures/anotherfullheatmap.png  used on input line 
-148.
+156.
 (pdftex.def)             Requested size: 167.2989pt x 144.55801pt.
 <../figures/explained_variance.png, id=19, 578.16pt x 433.62pt>
 File: ../figures/explained_variance.png Graphic file (type png)
 <use ../figures/explained_variance.png>
 Package pdftex.def Info: ../figures/explained_variance.png  used on input line 
-152.
+160.
 (pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
-<../figures/redacted/correlation_matrix.png, id=20, 715.17188pt x 709.14937pt>
-File: ../figures/redacted/correlation_matrix.png Graphic file (type png)
-<use ../figures/redacted/correlation_matrix.png>
-Package pdftex.def Info: ../figures/redacted/correlation_matrix.png  used on in
-put line 165.
-(pdftex.def)             Requested size: 167.2989pt x 165.89267pt.
-<../figures/better_cov.png, id=21, 578.16pt x 433.62pt>
-File: ../figures/better_cov.png Graphic file (type png)
-<use ../figures/better_cov.png>
-Package pdftex.def Info: ../figures/better_cov.png  used on input line 169.
+ [3 <../figures/anotherfullheatmap.png> <../figures/explained_variance.png>]
+<../figures/redo/cellphone/cp_covariance.png, id=27, 739.26187pt x 641.39626pt>
+
+File: ../figures/redo/cellphone/cp_covariance.png Graphic file (type png)
+<use ../figures/redo/cellphone/cp_covariance.png>
+Package pdftex.def Info: ../figures/redo/cellphone/cp_covariance.png  used on i
+nput line 173.
+(pdftex.def)             Requested size: 167.2989pt x 145.1496pt.
+
+Underfull \hbox (badness 5175) in paragraph at lines 174--174
+[]\OT1/cmr/m/n/9 (a) |post-processed cor-re-la-tion ma-trix
+ []
+
+<../figures/redo/cellphone/cp_explained_variance.png, id=28, 578.16pt x 433.62p
+t>
+File: ../figures/redo/cellphone/cp_explained_variance.png Graphic file (type pn
+g)
+<use ../figures/redo/cellphone/cp_explained_variance.png>
+Package pdftex.def Info: ../figures/redo/cellphone/cp_explained_variance.png  u
+sed on input line 177.
 (pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
- [3 <../figures/anotherfullheatmap.png> <../figures/explained_variance.png> <..
-/figures/redacted/correlation_matrix.png> <../figures/better_cov.png>]
-<../figures/landline/raw_correlation_matrix.png, id=30, 389.95688pt x 364.36125
+<../figures/landline/raw_correlation_matrix.png, id=29, 389.95688pt x 364.36125
 pt>
 File: ../figures/landline/raw_correlation_matrix.png Graphic file (type png)
 <use ../figures/landline/raw_correlation_matrix.png>
 Package pdftex.def Info: ../figures/landline/raw_correlation_matrix.png  used o
-n input line 179.
+n input line 187.
 (pdftex.def)             Requested size: 167.2989pt x 156.31645pt.
-<../figures/landline/raw_variance_curve.png, id=31, 578.16pt x 433.62pt>
+<../figures/landline/raw_variance_curve.png, id=30, 578.16pt x 433.62pt>
 File: ../figures/landline/raw_variance_curve.png Graphic file (type png)
 <use ../figures/landline/raw_variance_curve.png>
 Package pdftex.def Info: ../figures/landline/raw_variance_curve.png  used on in
-put line 183.
+put line 191.
 (pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
-<../figures/landline/trasnformed_corr.png, id=32, 763.35187pt x 654.94687pt>
-File: ../figures/landline/trasnformed_corr.png Graphic file (type png)
-<use ../figures/landline/trasnformed_corr.png>
-Package pdftex.def Info: ../figures/landline/trasnformed_corr.png  used on inpu
-t line 193.
-(pdftex.def)             Requested size: 167.2989pt x 143.53911pt.
-<../figures/landline/transformedelbow.png, id=33, 578.16pt x 433.62pt>
-File: ../figures/landline/transformedelbow.png Graphic file (type png)
-<use ../figures/landline/transformedelbow.png>
-Package pdftex.def Info: ../figures/landline/transformedelbow.png  used on inpu
-t line 197.
-(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
-<../figures/landline/optimal_kmeans.png, id=34, 578.16pt x 433.62pt>
-File: ../figures/landline/optimal_kmeans.png Graphic file (type png)
-<use ../figures/landline/optimal_kmeans.png>
-Package pdftex.def Info: ../figures/landline/optimal_kmeans.png  used on input 
-line 206.
-(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
-<../figures/cellphone_cluster/kmeans.png, id=35, 578.16pt x 433.62pt>
-File: ../figures/cellphone_cluster/kmeans.png Graphic file (type png)
-<use ../figures/cellphone_cluster/kmeans.png>
-Package pdftex.def Info: ../figures/cellphone_cluster/kmeans.png  used on input
- line 210.
-(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
+[4 <../figures/redo/cellphone/cp_covariance.png> <../figures/redo/cellphone/cp_
+explained_variance.png> <../figures/landline/raw_correlation_matrix.png> <../fi
+gures/landline/raw_variance_curve.png>]
+<../figures/redo/landline/ll_covariance.png, id=38, 623.32875pt x 621.82312pt>
+File: ../figures/redo/landline/ll_covariance.png Graphic file (type png)
+<use ../figures/redo/landline/ll_covariance.png>
+Package pdftex.def Info: ../figures/redo/landline/ll_covariance.png  used on in
+put line 202.
+(pdftex.def)             Requested size: 167.2989pt x 166.89821pt.
 
-[4 <../figures/landline/raw_correlation_matrix.png> <../figures/landline/raw_va
-riance_curve.png> <../figures/landline/trasnformed_corr.png> <../figures/landli
-ne/transformedelbow.png>] [5 <../figures/landline/optimal_kmeans.png> <../figur
-es/cellphone_cluster/kmeans.png>] [6] (FinalReport.aux) ) 
+Underfull \hbox (badness 5175) in paragraph at lines 203--203
+[]\OT1/cmr/m/n/9 (a) |post-processed cor-re-la-tion ma-trix
+ []
+
+<../figures/redo/landline/ll_explained_variance.png, id=39, 578.16pt x 433.62pt
+>
+File: ../figures/redo/landline/ll_explained_variance.png Graphic file (type png
+)
+<use ../figures/redo/landline/ll_explained_variance.png>
+Package pdftex.def Info: ../figures/redo/landline/ll_explained_variance.png  us
+ed on input line 206.
+(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
+[5 <../figures/redo/landline/ll_covariance.png> <../figures/redo/landline/ll_ex
+plained_variance.png>]
+<../figures/R/Rplot.png, id=45, 283.0575pt x 413.29407pt>
+File: ../figures/R/Rplot.png Graphic file (type png)
+<use ../figures/R/Rplot.png>
+Package pdftex.def Info: ../figures/R/Rplot.png  used on input line 220.
+(pdftex.def)             Requested size: 188.21288pt x 274.81818pt.
+<../figures/R/landline_removedoutliers.png, id=46, 304.13625pt x 414.04688pt>
+File: ../figures/R/landline_removedoutliers.png Graphic file (type png)
+<use ../figures/R/landline_removedoutliers.png>
+Package pdftex.def Info: ../figures/R/landline_removedoutliers.png  used on inp
+ut line 224.
+(pdftex.def)             Requested size: 188.21288pt x 256.23888pt.
+<../figures/sklearnpca.png, id=47, 847.7271pt x 509.5035pt>
+File: ../figures/sklearnpca.png Graphic file (type png)
+<use ../figures/sklearnpca.png>
+Package pdftex.def Info: ../figures/sklearnpca.png  used on input line 233.
+(pdftex.def)             Requested size: 230.04079pt x 138.25969pt.
+ [6 <../figures/R/Rplot.png> <../figures/R/landline_removedoutliers.png> <../fi
+gures/sklearnpca.png>]
+<../figures/redo/cellphonemap.png, id=54, 361.35pt x 361.35pt>
+File: ../figures/redo/cellphonemap.png Graphic file (type png)
+<use ../figures/redo/cellphonemap.png>
+Package pdftex.def Info: ../figures/redo/cellphonemap.png  used on input line 2
+44.
+(pdftex.def)             Requested size: 167.2989pt x 167.2982pt.
+<../figures/redo/landlinemap.png, id=55, 432.1746pt x 362.0727pt>
+File: ../figures/redo/landlinemap.png Graphic file (type png)
+<use ../figures/redo/landlinemap.png>
+Package pdftex.def Info: ../figures/redo/landlinemap.png  used on input line 24
+8.
+(pdftex.def)             Requested size: 167.2989pt x 140.15807pt.
+<../figures/redo/cellphone/cp_optimal_k.png, id=56, 578.16pt x 433.62pt>
+File: ../figures/redo/cellphone/cp_optimal_k.png Graphic file (type png)
+<use ../figures/redo/cellphone/cp_optimal_k.png>
+Package pdftex.def Info: ../figures/redo/cellphone/cp_optimal_k.png  used on in
+put line 258.
+(pdftex.def)             Requested size: 188.21288pt x 141.1564pt.
+<../figures/redo/landline/ll_optimal_k.png, id=57, 578.16pt x 433.62pt>
+File: ../figures/redo/landline/ll_optimal_k.png Graphic file (type png)
+<use ../figures/redo/landline/ll_optimal_k.png>
+Package pdftex.def Info: ../figures/redo/landline/ll_optimal_k.png  used on inp
+ut line 262.
+(pdftex.def)             Requested size: 188.21288pt x 141.1564pt.
+ [7 <../figures/redo/cellphonemap.png> <../figures/redo/landlinemap.png> <../fi
+gures/redo/cellphone/cp_optimal_k.png> <../figures/redo/landline/ll_optimal_k.p
+ng>]
+<../figures/redo/landline/ll_kmeans2.png, id=67, 421.3341pt x 330.2739pt>
+File: ../figures/redo/landline/ll_kmeans2.png Graphic file (type png)
+<use ../figures/redo/landline/ll_kmeans2.png>
+Package pdftex.def Info: ../figures/redo/landline/ll_kmeans2.png  used on input
+ line 272.
+(pdftex.def)             Requested size: 188.21288pt x 147.53333pt.
+<../figures/redo/landline/ll_kmeans3.png, id=68, 421.3341pt x 330.2739pt>
+File: ../figures/redo/landline/ll_kmeans3.png Graphic file (type png)
+<use ../figures/redo/landline/ll_kmeans3.png>
+Package pdftex.def Info: ../figures/redo/landline/ll_kmeans3.png  used on input
+ line 276.
+(pdftex.def)             Requested size: 188.21288pt x 147.53333pt.
+<../figures/redo/landline/ll_kmeans4.png, id=69, 421.3341pt x 330.2739pt>
+File: ../figures/redo/landline/ll_kmeans4.png Graphic file (type png)
+<use ../figures/redo/landline/ll_kmeans4.png>
+Package pdftex.def Info: ../figures/redo/landline/ll_kmeans4.png  used on input
+ line 283.
+(pdftex.def)             Requested size: 188.21288pt x 147.53333pt.
+ [8 <../figures/redo/landline/ll_kmeans2.png> <../figures/redo/landline/ll_kmea
+ns3.png> <../figures/redo/landline/ll_kmeans4.png>] [9] (FinalReport.aux) ) 
 Here is how much of TeX's memory you used:
- 5174 strings out of 492946
- 82407 string characters out of 3124934
- 159946 words of memory out of 3000000
- 8981 multiletter control sequences out of 15000+200000
+ 5219 strings out of 492970
+ 79534 string characters out of 3143381
+ 160473 words of memory out of 3000000
+ 8992 multiletter control sequences out of 15000+200000
  9734 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,43p,1104b,506s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/lgdillin/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Us
-ers/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi9.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/lgdillin/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/lgdillin/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users
-/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9
-.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmss12.pfb><C:/Users/lgdillin/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/lgdillin/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on FinalReport.pdf (6 pages, 368380 bytes).
+ 42i,10n,43p,888b,502s stack positions out of 5000i,500n,10000p,200000b,50000s
+<E:/
+miketex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/miketex/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
+E:/miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/miketex/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<E:/miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/miketex/fonts/type1/pub
+lic/amsfonts/cm/cmss12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><E:/miketex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on FinalReport.pdf (9 pages, 494261 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

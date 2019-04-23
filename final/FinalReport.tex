@@ -141,7 +141,15 @@ The next step was to take our anomalies detected in the streaming phone data, an
 
 We wanted to use principal component analysis (PCA) to figure how many dimensions were required to explain at least 85\% of the variance in the set as a whole.  However, there were some extreme outliers in the data.  A few of the feature columns had a single outlier which dominated the variance of the entire set and broke the PCA algorithm. 
 
-\newpage
+What is principal component analysis does it takes a set of possible correlated variables from a dataset, and transforms them into a set of linearly uncorrelated variables called \textit{Principal Components (Wikipedia, n.d.)}.  The first principal component always has the highest variance.  Generally what is done in the industry, is select enough principal components to explain at least 85\% (I don't know where this exactly comes from, but it is the standard) of the total variance in the set. Once the number of PC's have been selected, the algorithm transforms the points to a space where each axis is a principal component, and the points are transformed by a linear combination of the variables which make up the principal components.
+
+It is worth noting that PCA is very sensitive to the relative scaling of the original variables \textit{(Wikipedia, n.d.)}.  This means that the presence of outliers in the data can completely break the PCA algorithm.  I want to start by showing the unprocessed data, and how it makes the results derived by PCA useless, and then how the preprocessing step, which is often the longest and most difficult part of data science, produces better data which we can then produce insights from.
+
+First, is the unprocessed cellphone data.  On the left is the correlation matrix, whose overall variance is dominated by a column containing far outliers. 
+
+On the left is the principal component graph, where as we increase the number of principal components, we gradually add back all of the variance in the dataset. Since what PCA tries to do is create an orthogonal space with $p$-dimensions (The desired number of principal components) it cannot span the entire original space unless $p = n$, where $n$ is the dimensionality of the original dataset.
+
+
 \begin{figure}[!htbp]
   	\centering
    	\begin{subfigure}[p]{0.4\linewidth}
@@ -156,22 +164,22 @@ We wanted to use principal component analysis (PCA) to figure how many dimension
 
 We can see from the variance plot, and the correlation matrix above that a single feature column had variance so high that the relationship between all other features is obfuscated by such a large variance.  In addition, many of these columns have a variance of 0 (that is, all fields have the exact same value for the whole column) so they are useless when deriving some sort of insight for the data.  In most cases, they can ruin the results of a model.  So we needed to find a way to remove these useless columns and model-destroying outliers.
 
-
+\newpage
 So we had to experiment with several different methods of outlier removal in order to preprocess the data in such a way that the algorithms would work.  We used a modified z-score approach to remove rows with outliers that dominated the variance of their columns.  The standard z-score approach is to divide the difference of the column mean and the data value by the standard deviation of the column.  The modified z-score uses the difference between the median and the value, and divides by the mean absolute deviation instead.  This method is more robust to outliers, and helps us calculate them. After doing these two steps, we end up with a much better looking correlation matrix and elbow curve
 
 \begin{figure}[!htbp]
   	\centering
    	\begin{subfigure}[p]{0.4\linewidth}
-    	\includegraphics[width=\linewidth]{../figures/redacted/correlation_matrix.png}
-	\caption{preprocessed correlation matrix (cellphone)}
+    	\includegraphics[width=\linewidth]{../figures/redo/cellphone/cp_covariance.png}
+	\caption{post-processed correlation matrix (cellphone)}
    	\end{subfigure}
    	\begin{subfigure}[p]{0.4\linewidth}
-    	\includegraphics[width=\linewidth]{../figures/better_cov.png}
+    	\includegraphics[width=\linewidth]{../figures/redo/cellphone/cp_explained_variance.png}
 	\caption{Variance elbow curve (cellphone)}
    	\end{subfigure}
 \end{figure} 
-\newpage
-Keep in mind that the data we are looking at here is specifically the cellphone data.  The landline data, while suffering from the same problems, ended up being a much simpler result after applying the same methodologies: Below are the before and after results of preprocessing the landline data:
+
+Keep in mind that the data we are looking at here is specifically the cellphone data.  The pre-processed correlation matrix shown below suffers from the same problems that the cellphone data did:
 
 \begin{figure}[!htbp]
   	\centering
@@ -185,46 +193,112 @@ Keep in mind that the data we are looking at here is specifically the cellphone 
    	\end{subfigure}
 \end{figure} 
 
+\newpage
 And after feature selection, and outlier detection and removal:
 
 \begin{figure}[!htbp]
   	\centering
    	\begin{subfigure}[p]{0.4\linewidth}
-    	\includegraphics[width=\linewidth]{../figures/landline/trasnformed_corr.png}
-	\caption{preprocessed correlation matrix (landline)}
+    	\includegraphics[width=\linewidth]{../figures/redo/landline/ll_covariance.png}
+	\caption{post-processed correlation matrix (landline)}
    	\end{subfigure}
    	\begin{subfigure}[p]{0.4\linewidth}
-    	\includegraphics[width=\linewidth]{../figures/landline/transformedelbow.png}
+    	\includegraphics[width=\linewidth]{../figures/redo/landline/ll_explained_variance.png}
 	\caption{Variance elbow curve (landline)}
    	\end{subfigure}
 \end{figure} 
 
-Once this was completed, that is, the data is successfully cleansed/wrangled, we now needed to explore several clustering techniques to try and find a natural separation in the data.  For the cellphone data, since the dimensionality was much higher, we needed to rely on a projection algorithm to visually verify the results of a clustering algorithm.  We used an algorithm call \textit{Uniform Manifold Approximation and Projection (UMAP)}.  First, we use Principal Component Analysis to select the minimum number of dimensions which gave us at least 85\% of the variance explained.  In the cellphone data case, it was 4.  So we ran the \textit{KMeans} clustering algorithm on the top 4 principal components (The 4 features which compose at least 85\% of the variance) and measured the sum squared distance between all points of a given cluster and the distance to their cluster center.  The smallest value of $k$ which gives us the smallest squared distance (called \textit{inertia}) is the optimal $k$.  Below are the plots for both cellphone and landline datasets:
+So what does this mean? Well the correlation matrix shows variables which vary together.  if you look at one of the pre-processed matrices, you can see that a single variable contains most of the variance for the entire dataset.  When a column and row is mostly purple, and one point is bright yellow, this means that the given variable there is highly independent from the other variables, and it contains much of the variance for the entire set.  As we can see post-processing, a few of the variables roughly vary together, with a few variables containing most of the variance of the dataset.
+
+However, we want to find which variables are really responsible for the variance in the data.  If you observe the two \textit{explained variance} plots for each of the datasets, you can see that we get more than our minimum of 85\% of the data with only two principal components.  This is great because then we can plot the raw PCA output to a plot and study it there.  Sometimes, the number of principal components required for our 85\% threadhold for a given dataset can be 7, 8, or some higher dimensional number that we can't visualize.  So we have to perform PCA, then find some projection algorithm to bring the PCA data down to a dimension we can understand.  This can obscure the results and make interpretation more difficult.  Luckily we don't have that problem here...
+
+\newpage
+Which is actually where I went wrong. After much frustration, I found that there are multiple ways to perform PCA.  And the way that Python did it (using scikit-learn) computed PCA in a way which accumulated much of the variance in a few principal components, but tended to mash the points together such that separation is difficult to see.  Another way is using singular value deocmposition, which is supposedly the preferred method for numerical accuracy. Just as an example, here is the first method and the second, side by side, in R, using the first two principal components on our landline dataset:
 \begin{figure}[!htbp]
   	\centering
-   	\begin{subfigure}[p]{0.4\linewidth}
-    	\includegraphics[width=\linewidth]{../figures/landline/optimal_kmeans.png}
-	\caption{Optimal $k$ for landline data}
+   	\begin{subfigure}[p]{0.45\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/R/Rplot.png}
+	\caption{sci-kit learn eigen-correlation method}
    	\end{subfigure}
-   	\begin{subfigure}[p]{0.4\linewidth}
-    	\includegraphics[width=\linewidth]{../figures/cellphone_cluster/kmeans.png}
-	\caption{Optimal $k$ for cellphone data}
+   	\begin{subfigure}[p]{0.45\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/R/landline_removedoutliers.png}
+	\caption{Singular Value Decomposition}
+   	\end{subfigure}
+\end{figure}
+
+Notice how the left plot is exactly similar to the one from scikit-learn:
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.55\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/sklearnpca.png}
+	\caption{post-processed correlation matrix (landline)}
    	\end{subfigure}
 \end{figure} 
 
+\newpage
+Note the arrows on the previous graphs are features of the plot that help us understand what the principal components are comprised of.  However, this better separation comes with a caveat.  We can't achieve the 85\% variance with just 2 principal components.  Now we need 5 for the landline data, and 6 for the cellphone data. After doing some experimental clustering on the data, we needed a way to see it.  We used an algorithm call \textit{Uniform Manifold Approximation and Projection (UMAP)}.   The initial results look very promising, but there is a catch.  Projection algorithms can often disrupt the global structure of the data, so it isn't always safe to cluster on the output.  With that said, here are the initial outputs of the projections:
+
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redo/cellphonemap.png}
+	\caption{UMAP cellphone projected data}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redo/landlinemap.png}
+	\caption{UMAP landline projected data}
+   	\end{subfigure}
+\end{figure} 
+
+One of the goto algorithms for clustering is KMeans. KMeans is an algorithm that seeks to partition the data into $k$ different groups where each data point belongs to the cluster whose mean it is closest to. With each point added, the mean of the cluster may shift a little, but it seeks to build samples based on distance to the mean of that sample.  To find the optimal value of $k$, that is, how many "samples" we have, we try a bunch of different values of $k$ and sum the distance from each point to its center:
+
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.45\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redo/cellphone/cp_optimal_k.png}
+	\caption{Optimal $k$ for cellphone data}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.45\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redo/landline/ll_optimal_k.png}
+	\caption{Optimal $k$ for landline data}
+   	\end{subfigure}
+\end{figure} 
+
+\newpage
+I produced a few of the plots with different values of $k$ for the landline data, simply to show that you can't always trust the projection data:
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.45\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redo/landline/ll_kmeans2.png}
+	\caption{$k=2$ for landline data}
+   	\end{subfigure}
+   	\begin{subfigure}[p]{0.45\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redo/landline/ll_kmeans3.png}
+	\caption{$k=3$ for landline data}
+   	\end{subfigure}
+\end{figure} 
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.45\linewidth}
+    	\includegraphics[width=\linewidth]{../figures/redo/landline/ll_kmeans4.png}
+	\caption{$k=4$ for landline data}
+   	\end{subfigure}
+\end{figure} 
+
+The first most glaring point is that the projection is different every time, and it depends on where the projection algorithm starts its seed.  There is consistently a large cluster separated from a small, dense cluster every time, which is interesting.  However, recall that a point belongs to the cluster whose mean it is closest too.  And since our optimal value of $k$ is actually 3 in regards to the landline data, then in it's hyper-dimensional space, the blue groups must be closer together than they are to the red or green, even if it looks like one blue piece is floating far away.  This sort of experimentation will continue with a variety of different algorithms, as well as hyper-parameters for those algorithms, to optimize the separation of the structure.  There is no one-size-fits all approach, and each algorithm answers the question in its own way.
 \subsection{Risks}
 \begin{itemize}
 \item \textbf{False Positives:} We reduce this risk by first setting a threshold below which "normal" callers are placed.  By doing so, we reduce the amount of variance in the data and can focus entirely upon the anomalies.  Since we are only dealing with the anomalies, the average person won't be accidently detected, and as a consequence the different between a legitimate anomaly (a person with real needs to make many calls) and a spam caller will become more apparent, as the structure of the data overall won't be obscured by the average person.
 \end{itemize}
 \subsection{Tasks}
-
+The tasks are administered ad-hoc.  Since data science is highly experimental, team members often worked on the same problem from different approaches, and there was discussion and agreement on which result to accept.
 \subsection{Schedule}
-
+The schedule was flexible the entire project and team members helped when they could.  Communication between the team and First Orion was difficult, and I feel as though the management dumped our team onto their data science team.  The data science team seemed unprepared to mentor college students (not their fault), especially since it was only a single person who also had a job to do on their own
 \subsection{Deliverables}
 \begin{itemize}
 \item \textbf{R code:} This is the code use to wrangle some of the data and split it into subsets, as well as detect and remove outliers
 \item \textbf{Python code:} This is the code used to run clustering and plotting algorithms on, produce plots, etc.
-\item \textbf{Insights:} Our project won't neccesarily have a deliverable, the deliverable is, the insights we can provide with our techniques, that is differentiating between high-volume legitimate callers and spam callers.  The spam callers will have to be investigated on their own once the results are complete.
+\item \textbf{Insights:} Our project won't neccesarily have a deliverable, the deliverable is, the insights we can provide with our techniques, that is differentiating between high-volume legitimate callers and spam callers. For example, separate the mobile/landline numbers into meaningful clusters and analyze the features to discover which ones are discriminatory. Also, the spam callers will have to be investigated on their own to verify that they are spam
 \end{itemize}
 
 \section{Key Personnel} 

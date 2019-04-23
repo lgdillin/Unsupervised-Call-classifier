@@ -42,13 +42,15 @@ for(i in 1:length(cp.mads)) {
   if(cp.mads[i] == 0) {
     cp.novariance = append(cp.novariance, i)
   }
+}
+for(i in 1:length(ll.mads)) {
   if(ll.mads[i] == 0) {
     ll.novariance = append(ll.novariance, i)
   }
 }
 # Remove columns with no variance
 cp.numeric = cp.numeric[, -cp.novariance]
-ll.numeric = cp.numeric[, -ll.novariance]
+ll.numeric = ll.numeric[, -ll.novariance]
 # Re-compute the MAD for trimmed data
 cp.mads = apply(cp.numeric, 2, mad) 
 ll.mads = apply(ll.numeric, 2, mad)
@@ -76,9 +78,12 @@ for(i in 1:nrow(cp.output)) {
     }
   }
 }
+cp.outliers = unique(cp.outliers)
 # cp.removed.outliers = cp.output[-cp.outliers,]
+cp.outlier.data = cp.numeric[cp.outliers,]
 cp.removed.outliers = cp.numeric[-cp.outliers,]
 write.csv(cp.removed.outliers, file = "cp_transformed.csv", row.names = F)
+write.csv(cp.outlier.data, file = "cp_outliers.csv", row.names = F)
 
 
 ### LandLine data
@@ -103,9 +108,12 @@ for(i in 1:nrow(ll.output)) {
     }
   }
 }
+ll.outliers = unique(ll.outliers)
 # ll.removed.outliers = ll.output[-ll.outliers,]
+ll.outlier.data = ll.numeric[ll.outliers,]
 ll.removed.outliers = ll.numeric[-ll.outliers,]
 write.csv(ll.removed.outliers, file = "ll_transformed.csv", row.names = F)
+write.csv(ll.outlier.data, file = "ll_outliers.csv", row.names = F)
 
 #Produce histograms
 for(i in 1:ncol(cp.removed.outliers)) {
@@ -113,32 +121,19 @@ for(i in 1:ncol(cp.removed.outliers)) {
 }
 
 for(i in 1:ncol(ll.removed.outliers)) {
-  hist(ll.removed.outliers[,i], freq = F, breaks = 30, main = names(ll.removed.outliers)[i])
+  hist(ll.removed.outliers[,i], freq = T, breaks = 30, main = names(ll.removed.outliers)[i])
 }
 
+# RUN THESE IF YOU NEED
+#install.packages("devtools")
+#library(devtools)
+#install_github("vqv/ggbiplot")
+#library(ggbiplot)
 
-#################################################################################
-# Pretty much garbage below here
-# write.csv(CPathena, file = "cellphone_athena_anomaly.csv", row.names = F)
-# write.csv(LLathena, file = "landline_athena_anomaly.csv", row.names = F)
-
-eps = 0.000001
-avg.callduration.transform = log(CPathena$Total_BToday_AvgDuration + eps)
-outlier.avgcalldur = which(avg.callduration.transform > 10)
-CPathena = CPathena[-c(outlier.avgcalldur),]
-
-n30daycalls.transform = log(CPathena$Total_N30Day_Calls + eps)
-outlier.30daycalls = c(which(n30daycalls.transform > 11), which(n30daycalls.transform < 0))
-CPathena = CPathena[-c(outlier.30daycalls),]
-
-write.csv(CPathena, file = "cellphone_athena_anomaly_trim.csv", row.names = F)
-
-# hist(athena.data$Total_B30Day_Calls, breaks = 30, freq = F, main = "Total_B30Day_Calls")
-
-# func = function(x) { if(x < 1e3) { return(x)}}
-# func1 = function(x) { return(as.numeric(x))}
-# x = split(athena.data$Total_B30Day_Calls, )
-# x = as.numeric(unlist(x))
-
-PCA.transformed = read.csv("../data/PCA_trans.csv", header=TRUE, sep = ",")
-hist(PCA.transformed$values, freq=F)
+# Run the prcomp function on each of the datasets
+cp.pca = prcomp(cp.removed.outliers, center = T, scale. = T)
+ll.pca = prcomp(ll.removed.outliers, center = T, scale. = T)
+ggbiplot(cp.pca)
+ggbiplot(ll.pca)
+write.csv(cp.pca$x, file = "cp_pca.csv", row.names = F)
+write.csv(ll.pca$x, file = "ll_pca.csv", row.names = F)
