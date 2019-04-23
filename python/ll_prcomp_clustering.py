@@ -40,10 +40,10 @@ plt.title('Elbow Method For Optimal k (landline)')
 plt.show()
 '''
 
-reduced = umap.UMAP(n_neighbors=20, min_dist=0.15).fit_transform(landline_subset)
+reduced = umap.UMAP(n_components = 3, n_neighbors=20, min_dist=0.15).fit_transform(landline_subset)
 
 #cluster = GaussianMixture(n_components = 2).fit(landline_subset)
-cluster = KMeans(n_clusters = 2).fit(landline_subset)
+cluster = KMeans(n_clusters = 3, precompute_distances = True, algorithm = 'full').fit(landline_subset)
 # cluster = AgglomerativeClustering(n_clusters = 2, linkage = 'single')
 labels = cluster.predict(landline_subset)
 # labels = DBSCAN(eps = 1.0, min_samples = 10).fit_predict(landline_subset)
@@ -51,10 +51,11 @@ labels = cluster.predict(landline_subset)
 
 landline_prcomp['DIM1'] = reduced[:, 0]
 landline_prcomp['DIM2'] = reduced[:, 1]
+landline_prcomp['DIM3'] = reduced[:, 2]
 landline_prcomp['labels'] = labels
 
-#fig = plt.figure()
-#ax = fig.add_subplot(111, projection='3d')
-#ax.scatter(cellphone_athena['DIM1'], cellphone_athena['DIM2'], cellphone_athena['DIM3'])
-sns.lmplot('DIM1', 'DIM2', data=landline_prcomp, hue='labels',fit_reg=False)
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(landline_prcomp['DIM1'], landline_prcomp['DIM2'], landline_prcomp['DIM3'])
+# sns.lmplot('DIM1', 'DIM2', data=landline_prcomp, hue='labels',fit_reg=False)
 plt.show()

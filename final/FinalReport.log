@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  23 APR 2019 02:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  23 APR 2019 13:19
 entering extended mode
 **./FinalReport.tex
 (FinalReport.tex
@@ -456,14 +456,14 @@ Underfull \hbox (badness 5175) in paragraph at lines 174--174
 []\OT1/cmr/m/n/9 (a) |post-processed cor-re-la-tion ma-trix
  []
 
-<../figures/redo/cellphone/cp_explained_variance.png, id=28, 578.16pt x 433.62p
-t>
+<../figures/redo/cellphone/cp_explained_variance.png, id=28, 462.528pt x 346.89
+6pt>
 File: ../figures/redo/cellphone/cp_explained_variance.png Graphic file (type pn
 g)
 <use ../figures/redo/cellphone/cp_explained_variance.png>
 Package pdftex.def Info: ../figures/redo/cellphone/cp_explained_variance.png  u
 sed on input line 177.
-(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
+(pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
 <../figures/landline/raw_correlation_matrix.png, id=29, 389.95688pt x 364.36125
 pt>
 File: ../figures/landline/raw_correlation_matrix.png Graphic file (type png)
@@ -491,14 +491,14 @@ Underfull \hbox (badness 5175) in paragraph at lines 203--203
 []\OT1/cmr/m/n/9 (a) |post-processed cor-re-la-tion ma-trix
  []
 
-<../figures/redo/landline/ll_explained_variance.png, id=39, 578.16pt x 433.62pt
->
+<../figures/redo/landline/ll_explained_variance.png, id=39, 462.528pt x 346.896
+pt>
 File: ../figures/redo/landline/ll_explained_variance.png Graphic file (type png
 )
 <use ../figures/redo/landline/ll_explained_variance.png>
 Package pdftex.def Info: ../figures/redo/landline/ll_explained_variance.png  us
 ed on input line 206.
-(pdftex.def)             Requested size: 167.2989pt x 125.46869pt.
+(pdftex.def)             Requested size: 167.2989pt x 125.4753pt.
 [5 <../figures/redo/landline/ll_covariance.png> <../figures/redo/landline/ll_ex
 plained_variance.png>]
 <../figures/R/Rplot.png, id=45, 283.0575pt x 413.29407pt>
@@ -565,7 +565,8 @@ Package pdftex.def Info: ../figures/redo/landline/ll_kmeans4.png  used on input
  line 283.
 (pdftex.def)             Requested size: 188.21288pt x 147.53333pt.
  [8 <../figures/redo/landline/ll_kmeans2.png> <../figures/redo/landline/ll_kmea
-ns3.png> <../figures/redo/landline/ll_kmeans4.png>] [9] (FinalReport.aux) ) 
+ns3.png> <../figures/redo/landline/ll_kmeans4.png>] [9] [10] (FinalReport.aux) 
+) 
 Here is how much of TeX's memory you used:
  5219 strings out of 492970
  79534 string characters out of 3143381
@@ -573,18 +574,17 @@ Here is how much of TeX's memory you used:
  8992 multiletter control sequences out of 15000+200000
  9734 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,43p,888b,502s stack positions out of 5000i,500n,10000p,200000b,50000s
-<E:/
-miketex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/miketex/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
-E:/miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/miketex/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-<E:/miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/miketex/fonts/type1/pub
-lic/amsfonts/cm/cmss12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><E:/miketex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on FinalReport.pdf (9 pages, 494261 bytes).
+ 42i,11n,43p,888b,502s stack positions out of 5000i,500n,10000p,200000b,50000s
+<E:/miketex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/miketex/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/miketex/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/miketex/fonts/type
+1/public/amsfonts/cm/cmss12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on FinalReport.pdf (10 pages, 489112 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
