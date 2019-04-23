@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  23 APR 2019 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  23 APR 2019 13:27
 entering extended mode
 **./FinalReport.tex
 (FinalReport.tex
@@ -565,8 +565,8 @@ Package pdftex.def Info: ../figures/redo/landline/ll_kmeans4.png  used on input
  line 283.
 (pdftex.def)             Requested size: 188.21288pt x 147.53333pt.
  [8 <../figures/redo/landline/ll_kmeans2.png> <../figures/redo/landline/ll_kmea
-ns3.png> <../figures/redo/landline/ll_kmeans4.png>] [9] [10] (FinalReport.aux) 
-) 
+ns3.png> <../figures/redo/landline/ll_kmeans4.png>] [9] [10] [11] (FinalReport.
+aux) ) 
 Here is how much of TeX's memory you used:
  5219 strings out of 492970
  79534 string characters out of 3143381
@@ -574,17 +574,17 @@ Here is how much of TeX's memory you used:
  8992 multiletter control sequences out of 15000+200000
  9734 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,43p,888b,502s stack positions out of 5000i,500n,10000p,200000b,50000s
-<E:/miketex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/miketex/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/miketex/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/miketex/fonts/type
-1/public/amsfonts/cm/cmss12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on FinalReport.pdf (10 pages, 489112 bytes).
+ 42i,10n,43p,888b,502s stack positions out of 5000i,500n,10000p,200000b,50000s
+<E:/miketex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/miketex/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/c
+mmi9.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><E:/miketex/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/
+cmr17.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><E:/miketex/fonts
+/type1/public/amsfonts/cm/cmss12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on FinalReport.pdf (11 pages, 489922 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
