@@ -133,7 +133,7 @@ for(i in 1:ncol(ll.removed.outliers)) {
 # Run the prcomp function on each of the datasets
 cp.pca = prcomp(cp.removed.outliers, center = T, scale. = T)
 ll.pca = prcomp(ll.removed.outliers, center = T, scale. = T)
-ggbiplot(cp.pca, choices = c(1,4))
-ggbiplot(ll.pca)
+# ggbiplot(cp.pca, choices = c(1,4))
+# ggbiplot(ll.pca)
 write.csv(cp.pca$x, file = "cp_pca.csv", row.names = F)
 write.csv(ll.pca$x, file = "ll_pca.csv", row.names = F)

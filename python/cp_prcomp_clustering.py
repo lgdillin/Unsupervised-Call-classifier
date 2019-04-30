@@ -16,46 +16,27 @@ from sklearn.preprocessing import RobustScaler, StandardScaler, MinMaxScaler
 
 plt.style.use('classic')
 
-# load cellphone data
+print('Loading Data')
 cellphone_prcomp = pd.read_csv('./data/cp_pca.csv')
-cellphone_subset = cellphone_prcomp[['PC1', 'PC2', 'PC3', 'PC4', 'PC5']]#, 'PC6']]
-print(cellphone_subset.columns)
-# Data is already scaled from R's prcomp()
-# scaler = StandardScaler().fit(cellphone_athena)
-# scaler.transform(cellphone_athena)
+cellphone_subset = cellphone_prcomp[['PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6']]
 
+print('Running TSNE')
+reduced = TSNE(n_components=2, 
+                random_state=0, 
+                n_iter=3500,
+                early_exaggeration=41.0,
+                perplexity=71,
+                learning_rate=150
+                ).fit_transform(cellphone_subset)
 
-#'''
-sum_of_squared_distances = []
-K = range(1,15)
-for k in K:
-    km = KMeans(n_clusters=k, n_init = 50, random_state = 0)
-    km = km.fit(cellphone_subset)
-    sum_of_squared_distances.append(km.inertia_)
+print('Clustering Data')
+cluster = KMeans(n_clusters = 3, random_state=2).fit(cellphone_subset)
+labels = cluster.predict(cellphone_subset)
 
-plt.plot(K, sum_of_squared_distances, 'bx-')
-plt.xlabel('k')
-plt.ylabel('Sum_of_squared_distances')
-plt.title('Elbow Method For Optimal k (cellphone)')
-plt.show()
-#'''
-
-# reduced = umap.UMAP(n_neighbors=20, min_dist=0.1).fit_transform(cellphone_subset)
-reduced = umap.UMAP().fit_transform(cellphone_subset)
-
-# cluster = GaussianMixture(n_components = 2).fit(cellphone_subset)
-cluster = KMeans(n_clusters = 3).fit(cellphone_subset)
-# cluster = AgglomerativeClustering(n_clusters = 2, linkage = 'single').fit(cellphone_subset)
-labels = DBSCAN().fit_predict(cellphone_subset)
-# labels = cluster.predict(cellphone_subset)
-
-
+print('Generating Plot')
 cellphone_prcomp['DIM1'] = reduced[:, 0]
 cellphone_prcomp['DIM2'] = reduced[:, 1]
 cellphone_prcomp['labels'] = labels
 
-#fig = plt.figure()
-#ax = fig.add_subplot(111, projection='3d')
-#ax.scatter(cellphone_athena['DIM1'], cellphone_athena['DIM2'], cellphone_athena['DIM3'])
-sns.lmplot('DIM1', 'DIM2', data=cellphone_prcomp, hue = 'labels', fit_reg=False)
+sns.lmplot('DIM1', 'DIM2', data=cellphone_prcomp, hue = 'labels', fit_reg=False, scatter_kws={"s": 100})
 plt.show()
